@@ -1,0 +1,12 @@
+<!-- payment_form.html -->
+<form method="post" action="{% url 'process_payment' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Pay Now</button>
+</form>
+
+
+<!--<form action="/process_payment/" method="post">-->
+<!--  <input type="hidden" name="payment_data" value="{{ payment_data }}">-->
+<!--  <button type="submit">Pay with Google Pay</button>-->
+<!--</form>-->
